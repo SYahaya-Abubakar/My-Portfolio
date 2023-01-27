@@ -1,30 +1,34 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="main flex flex-col"><Navbar @toggleDark = 'toggleDark()' /></div>
 </template>
 
+<script setup lang="ts">
+import Navbar from './components/Navbar.vue'
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark({
+  selector: "body", //element to add attribute to
+  attribute: "theme", // attribute name
+  valueDark: "custom-dark", // attribute value for dark mode
+  valueLight: "custom-light", // attribute value for light mode
+});
+const toggleDark = useToggle(isDark);
+
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+ *{
+  /* outline: 1px solid black; */
+ }
+  body {
+    /* 1!! */
+    margin: 0;
+    padding: 0;
+  }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  [theme="custom-dark"] {
+  background: #16171d;
+  color: #fff;
 }
 </style>
