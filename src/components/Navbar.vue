@@ -1,9 +1,9 @@
 <template lang="">
   <!-- component -->
   <div class="navbar">
-    <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+    <div class="bg-gray-100 dark-mode:bg-gray-900">
       <div
-        class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
+        class="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800"
       >
         <div
           x-data="{ open: true }"
@@ -12,7 +12,7 @@
           <div class="flex flex-row items-center justify-between p-4">
             <a
               href="#"
-              class="text-lg font-bold tracking-widest text-gray-900 capitalize rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+              class="text-2xl font-bold leading-8 tracking-widest text-gray-900 capitalize rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
               >Sadick Yahaya</a
             >
             <!-- <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -28,22 +28,22 @@
           >
             <router-link
               to="/"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gold focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               >Home</router-link
             >
             <router-link
               to="/about"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gold focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               >About</router-link
             >
             <router-link
               to="/projects"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gold focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               >Project</router-link
             >
             <router-link
               to="/contact"
-              class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gold focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               >Contact</router-link
             >
             <div>
@@ -59,7 +59,7 @@
                 />
                 <label
                   for="toggle"
-                  class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+                  class="toggle-label block overflow-hidden h-6 rounded-full bg-white cursor-pointer"
                 ></label>
               </div>
               <span class="cursor-pointer"
@@ -74,17 +74,7 @@
   <router-view></router-view>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
 import { useRouter } from "vue-router";
-
-let darkModeIcon = ref(false);
-const handleIconChange = (e) => {
-  if (e.target.value) {
-    darkModeIcon.value = true;
-  } else {
-    darkModeIcon.value = false;
-  }
-};
 </script>
 
 <style>
