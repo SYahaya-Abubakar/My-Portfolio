@@ -22,7 +22,10 @@
         </div>
       </div>
       <div class="flex gap-3 content-center">
-        <button class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold">
+        <button
+          @click="sendEmail()"
+          class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold"
+        >
           <span><i class="fa-regular fa-envelope"></i></span> Mail me
         </button>
         <button
@@ -42,7 +45,7 @@
 
   <div class="section-1 grid mt-36 bg-section-1-bg gap-5">
     <div class="section-1-img flex items-center justify-center">
-      <img class="pic-1" src="../assets/pic-1.png" alt="" />
+      <img class="pic-1" src="../assets/section-1-img.svg" alt="" />
     </div>
     <div class="flex flex-col px-8 py-11 gap-20">
       <div class="flex items-end gap-12">
@@ -75,26 +78,121 @@
         </div>
       </div>
       <div class="flex flex-col gap-5">
-        <span class="text-5xl font-semibold text-text-color-3">Glad to Help You!</span>
+        <span class="text-5xl font-semibold text-text-color-3"
+          >Glad to Work with You!</span
+        >
         <span class="text-xl font-normal w-10/12"
-          >As a full-service digital designer, I work closely <br/> with my clients to
-          define, design and develop <br/>  transformable user experiences across all <br/> 
+          >As a frontend developer, I work closely <br />
+          with my clients to define, design and develop <br />
+          transformable user experiences across all <br />
           platforms and brand’s touchpoints.</span
         >
       </div>
     </div>
   </div>
 
-  <div class="section-2 mt-36">
-    <div class="flex justify-between">
-      <span class="text-5xl font-semibold text-text-color-3">Recent Projects</span>
+  <div class="flex flex-col gap-14 section-2 mt-36">
+    <div class="flex justify-between items-center">
+      <span class="text-5xl font-semibold text-text-color-3"
+        >Recent Projects</span
+      >
       <button class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold">
         View More
-        </button>
+      </button>
+    </div>
+
+    <div class="recent-projects flex justify-around">
+      <div class="">
+        <img src="../assets/project-1.svg" alt="" />
+        <div class="mt-4">
+          <span class="text-xl font-semibold text-text-color-4"
+            >Frontend Portfolio</span
+          >
+          <div class="mt-3">
+            <span class="text-base font-medium text-text-color-3"
+              ><span><i class="fa-solid fa-book"></i></span> View Study
+              Case</span
+            >
+            <span class="text-base font-medium text-text-color-3 ml-14"
+              ><span><i class="fa-solid fa-eye"></i></span> Preview</span
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="../assets/project-2.svg" alt="" />
+        <div class="mt-4">
+          <span class="text-xl font-semibold text-text-color-4"
+            >Frontend Portfolio</span
+          >
+          <div class="mt-3">
+            <span class="text-base font-medium text-text-color-3"
+              ><span><i class="fa-solid fa-book"></i></span> View Study
+              Case</span
+            >
+            <span class="text-base font-medium text-text-color-3 ml-14"
+              ><span><i class="fa-solid fa-eye"></i></span> Preview</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="section-1 h-80 grid place-items-center mt-36 bg-gold gap-5">
+    <span class="self-center pl-32 text-5xl font-semibold text-white"
+      >Interested working with me?</span
+    >
+    <div class="flex gap-7 content-center">
+      <button
+        @click="sendEmail()"
+        class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 bg-white"
+      >
+        <span><i class="fa-regular fa-envelope"></i></span> Email me
+      </button>
+      <button
+        class="px-5 py-3 mt-2 rounded-lg font-bold border-2 text-white border-white"
+        data-ripple-light="true"
+      >
+        See More Projects
+      </button>
+    </div>
+  </div>
+
+  <div class="section-4 bg-section-4-bg mt-36"></div>
+
+  <footer class="footer flex items-center justify-around">
+    <span class="text-4xl font-semibold text-text-color-2">Let's Connect</span>
+    <div class="flex gap-5">
+      <span><i class="fa-brands fa-linkedin-in fa-2xl"></i></span>
+      <span><i class="fa-brands fa-github fa-2xl"></i></span>
+      <span><i class="fa-brands fa-twitter fa-2xl"></i></span>
+    </div>
+    <span
+      @click="scrollToTop()"
+      class="text-2xl font-medium cursor-pointer text-text-color-2"
+      >Back to Top <span><i class="fa-solid fa-arrow-up"></i></span
+    ></span>
+  </footer>
 </template>
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+// send email function
+const win: Window = window;
+const sendEmail = () => {
+  win.location = "mailto:sadickashton@gmail.com";
+};
+
+// scroll to top function
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -133,10 +231,25 @@
   border-radius: 30px;
 }
 
-.pic-1 {
-  width: 20rem;
+/* .pic-1 {
+  width: 18rem;
   height: 28rem;
   border-radius: 30px;
+} */
+
+/* section-2 styles */
+.recent-projects {
+  grid-template-columns: 50% 50%;
 }
 
+/* section-4 styles */
+.section-4 {
+  width: 100%;
+  height: 500px;
+}
+
+footer {
+  width: 100%;
+  height: 164px;
+}
 </style>
