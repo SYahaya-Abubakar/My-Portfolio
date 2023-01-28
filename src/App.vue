@@ -20,7 +20,7 @@ const toggleDark = useToggle(isDark);
   /* outline: 1px solid black; */
 }
 body {
-  /* 1!! */
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
