@@ -38,59 +38,43 @@
 
   <div class="about-section-1 mt-16 border-t-2 border-about-page-border pt-10">
     <span class="text-lg leading-8 font-normal text-black text-justify"
-      >My most recent work stint was with Sprinklr where I designed for some of
-      its core offerings like Social Media Engagement, Social Advertising, Care
-      support and Analytics for big brands with a global reach that helped
-      integrate all their social marketing needs under one roof. Having led the
-      design team for four years in this young, rapidly growing enterprise
-      startup environment - taught me how to balance business goals and
-      engineering constraints as I unrelentingly advocated for the user.</span
+      >As a Junior Front-End Developer with 2 years of experience, I specialize
+      in building user-friendly and responsive web applications using Vue.js,
+      React.js and TypeScript. My strong understanding of front-end
+      technologies, including HTML, CSS, and JavaScript, allows me to develop
+      high-quality and visually appealing websites that meet the needs of both
+      the client and the end-user.</span
     >
 
     <img class="about-pic my-10" src="../assets/hero-devices.svg" alt="" />
 
-    <span class="mt-10 text-lg leading-8 font-normal text-black text-justify">
-      I graduated from Symbiosis Institute of Design, India with a degree in
-      User Experience Design. I loved the human-centered design methods and
-      processes I learned in school and applied them to my thesis project with
-      Microsoft R&D, Hyderabad I grew up in 7 different states in India and my
-      ability to quickly adjust to new challenges in life comes from that. Owing
-      to my diverse upbringing, I embrace all cultures and try to bring it to
-      the designs I create. I am a movie buff and there’s nothing like relaxing
-      to a good masala Bollywood movie. Food is my second love and I let my nose
-      guide me to the pleasures of the stomach once every weekend.</span
+    <span class="block mt-10 mb-10 text-lg leading-8 font-normal text-black text-justify">
+      I have experience in working in Agile environment and have been able to
+      deliver projects on time. I am always eager to learn and stay up-to-date
+      with the latest front-end technologies and trends. I am a team player and
+      I enjoy collaborating with other developers, designers, and stakeholders
+      to create beautiful and functional websites.</span
     >
-<div class="border-b-2 border-about-page-border pb-24">
-    <img class="about-pic my-10" src="../assets/how-i-work.svg" alt="" />
-</div>
+
+    <span class="text-lg leading-8 font-normal text-black text-justify">
+      I am looking for a new opportunity to utilize my skills and experience to
+      contribute to a dynamic and innovative team. If you're looking for a
+      Junior Front-End Developer with Vue.js and TypeScript experience, please
+      don't hesitate to contact me.</span
+    >
+
+    <div class="border-b-2 border-about-page-border pb-24">
+      <img class="about-pic my-10" src="../assets/how-i-work.svg" alt="" />
+    </div>
   </div>
 
   <div class="section-4 bg-about-page-map mt-36"></div>
 
-    <footer class="footer flex items-center justify-around">
-      <span class="text-4xl font-semibold text-text-color-2"
-        >Let's Connect</span
-      >
-      <div class="flex gap-5">
-        <span><i class="fa-brands fa-linkedin-in fa-2xl"></i></span>
-        <span><i class="fa-brands fa-github fa-2xl"></i></span>
-        <span><i class="fa-brands fa-twitter fa-2xl"></i></span>
-      </div>
-      <span
-        @click="scrollToTop()"
-        class="text-2xl font-medium cursor-pointer text-text-color-2"
-        >Back to Top <span><i class="fa-solid fa-arrow-up"></i></span
-      ></span>
-    </footer>
+  <Footer />
 </template>
 
 <script setup lang="ts">
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+import Footer from "@/components/Footer.vue";
 </script>
 
 <style>

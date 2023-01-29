@@ -98,7 +98,7 @@
       <span class="text-5xl font-semibold text-text-color-3"
         >Recent Projects</span
       >
-      <button class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold">
+      <button @click="$router.push('/projects')" class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold">
         View More
       </button>
     </div>
@@ -148,11 +148,12 @@
     <div class="flex gap-7 content-center">
       <button
         @click="sendEmail()"
-        class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 border-2 border-border-2 bg-white hover:text-white hover:bg-border-2"
+        class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 bg-white"
       >
         <span><i class="fa-regular fa-envelope"></i></span> Let's do this
       </button>
       <button
+      @click="$router.push('/projects')"
         class="px-5 py-3 mt-2 rounded-lg font-bold border-2 text-white border-white"
         data-ripple-light="true"
       >
@@ -160,40 +161,15 @@
       </button>
     </div>
   </div>
-
   <div class="section-4 bg-section-4-bg mt-36"></div>
-
-  <footer class="footer flex items-center justify-around">
-    <span class="text-4xl font-semibold text-text-color-2">Let's Connect</span>
-    <div class="flex gap-5">
-      <span><i class="fa-brands fa-linkedin-in fa-2xl"></i></span>
-      <span><i class="fa-brands fa-github fa-2xl"></i></span>
-      <span><i class="fa-brands fa-twitter fa-2xl"></i></span>
-    </div>
-    <span
-      @click="scrollToTop()"
-      class="text-2xl font-medium cursor-pointer text-text-color-2"
-      >Back to Top <span><i class="fa-solid fa-arrow-up"></i></span
-    ></span>
-  </footer>
+  <Footer />
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-// send email function
-const win: Window = window;
-const sendEmail = () => {
-  win.location = "mailto:sadickashton@gmail.com";
-};
-
-// scroll to top function
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+import { sendEmail } from '@/functions';
+import Footer from "@/components/Footer.vue";
 </script>
 
 <style>
@@ -204,7 +180,9 @@ const scrollToTop = () => {
 .navbar,
 .section-1,
 .about-section-1,
-.section-2 {
+.section-2,
+.heading,
+.projects {
   width: 63.5vw;
   margin: 0 auto;
 }
@@ -251,10 +229,5 @@ const scrollToTop = () => {
 .section-4 {
   width: 100%;
   height: 500px;
-}
-
-footer {
-  width: 100%;
-  height: 164px;
 }
 </style>
