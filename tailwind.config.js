@@ -14,6 +14,9 @@ module.exports = {
       'section-1-bg': '#E9E9E9',
       'section-4-bg': '#6FC2C5',
       'plus-color': '#8ED2A9',
+      'about-page-border': '#E1E1E1',
+      'about-page-map': '#90C0E9',
+      'border-2': '#6FC2C5'
      },
    },
    variants: {

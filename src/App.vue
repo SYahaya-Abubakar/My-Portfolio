@@ -31,7 +31,7 @@ body {
 }
 
 [theme="custom-light"] {
-  background: #E1E1E1;
+  background: #f1f1f1;
   color: #16171d;
 }
 </style>

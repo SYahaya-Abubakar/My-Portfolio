@@ -1,6 +1,6 @@
 <template lang="">
-  <div class="home grid mt-20 px-4 mx-auto gap-16">
-    <div class="w-fit flex flex-col gap-6">
+  <div class="home grid mt-16 px-4 mx-auto gap-16">
+    <div class="flex flex-col gap-6">
       <span class="font-medium text-text-color leading-9 text-2xl">Hey!</span>
       <h1 class="name font-semibold text-5xl text-text-color-">
         I’m <span class="text-gold">Sadick Yahaya</span>.<br />
@@ -28,12 +28,14 @@
         >
           <span><i class="fa-regular fa-envelope"></i></span> Mail me
         </button>
-        <button
-          class="px-5 py-3 mt-2 rounded-lg font-bold border-2 border-gold"
-          data-ripple-light="true"
+        <a href="../files/Yahaya Sadick Abubakar - Resume.pdf" download
+          ><button
+            class="px-5 py-3 mt-2 rounded-lg font-bold border-2 border-gold"
+            data-ripple-light="true"
+          >
+            <span><i class="fa-solid fa-arrow-down"></i></span> Download CV
+          </button></a
         >
-          <span><i class="fa-solid fa-arrow-down"></i></span> Download CV
-        </button>
       </div>
     </div>
     <div class="images grid">
@@ -45,14 +47,14 @@
 
   <div class="section-1 grid mt-36 bg-section-1-bg gap-5">
     <div class="section-1-img flex items-center justify-center">
-      <img class="pic-1" src="../assets/section-1-img.svg" alt="" />
+      <img class="pic-1" src="../assets/mf-avatar.svg" alt="" />
     </div>
     <div class="flex flex-col px-8 py-11 gap-20">
       <div class="flex items-end gap-12">
         <div class="flex flex-col">
           <span
             class="flex items-center text-7xl text-text-color-2 font-semibold"
-            >120<span class="text-plus-color text-5xl font-semibold"
+            >10<span class="text-plus-color text-5xl font-semibold"
               ><i class="fa-solid fa-plus"></i></span
           ></span>
           <span class="text-2xl leading-8 font-normal text-text-color"
@@ -146,9 +148,9 @@
     <div class="flex gap-7 content-center">
       <button
         @click="sendEmail()"
-        class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 bg-white"
+        class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 border-2 border-border-2 bg-white hover:text-white hover:bg-border-2"
       >
-        <span><i class="fa-regular fa-envelope"></i></span> Email me
+        <span><i class="fa-regular fa-envelope"></i></span> Let's do this
       </button>
       <button
         class="px-5 py-3 mt-2 rounded-lg font-bold border-2 text-white border-white"
@@ -178,7 +180,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+import { useRouter } from "vue-router";
 // send email function
 const win: Window = window;
 const sendEmail = () => {
@@ -198,7 +200,10 @@ const scrollToTop = () => {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .home,
+.about,
+.navbar,
 .section-1,
+.about-section-1,
 .section-2 {
   width: 63.5vw;
   margin: 0 auto;

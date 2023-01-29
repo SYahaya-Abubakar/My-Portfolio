@@ -87,4 +87,9 @@ import { useRouter } from "vue-router";
   @apply: bg-green-400;
   background-color: #68d391;
 }
+
+nav .router-link-exact-active {
+  background-color: #EEBF63;
+  color: #f1f1f1;
+}
 </style>
