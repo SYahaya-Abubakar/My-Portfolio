@@ -23,6 +23,7 @@
       </div>
       <div class="flex gap-3 content-center">
         <button
+          v-thover="{ scale: 2.0, border: 1 }"
           @click="sendEmail()"
           class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold"
         >
@@ -98,7 +99,11 @@
       <span class="text-5xl font-semibold text-text-color-3"
         >Recent Projects</span
       >
-      <button @click="$router.push('/projects')" class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold">
+      <button
+        v-thover="{ scale: 2.0, color: 'transparent' }"
+        @click="$router.push('/projects')"
+        class="px-5 py-3 mt-2 rounded-lg font-bold text-white bg-gold"
+      >
         View More
       </button>
     </div>
@@ -153,7 +158,7 @@
         <span><i class="fa-regular fa-envelope"></i></span> Let's do this
       </button>
       <button
-      @click="$router.push('/projects')"
+        @click="$router.push('/projects')"
         class="px-5 py-3 mt-2 rounded-lg font-bold border-2 text-white border-white"
         data-ripple-light="true"
       >
@@ -168,7 +173,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { sendEmail } from '@/functions';
+import { sendEmail } from "@/functions";
 import Footer from "@/components/Footer.vue";
 </script>
 

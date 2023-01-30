@@ -1,6 +1,14 @@
 <template>
-  <div class="main flex flex-col"><tetikus showDefaultCursor="true" size="30" color="#000000" contentPosition="right"/>
-  <Navbar @toggleDark="toggleDark()" />
+  <div class="main flex flex-col" v-delay="">
+    <tetikus
+      showDefaultCursor="true"
+      size="30"
+      contentPosition="bottom"
+      hideOnOut="true"
+      border="1" 
+      throttleSpeed="5"
+    />
+    <Navbar @toggleDark="toggleDark()" />
   </div>
 </template>
 
