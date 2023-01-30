@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div class="home grid mt-16 px-4 mx-auto gap-16">
     <div class="flex flex-col gap-6">
       <span class="font-medium text-text-color leading-9 text-2xl">Hey!</span>

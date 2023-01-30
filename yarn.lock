@@ -271,6 +271,11 @@
   dependencies:
     vue "^2.6.11"
 
+"@namchee/tetikus@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@namchee/tetikus/-/tetikus-0.4.2.tgz#1228415b6aed9428fdb8804c8a160a4a139a9e98"
+  integrity sha512-YCz0zp2j+3x48lQqSft/Yse1fti8+NyrcB1XAPPQa8tpjEvrdiSSb5Rx5CQlRQtbPlvmYp4JmbsNA5EOO1D9+A==
+
 "@node-ipc/js-queue@2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@node-ipc/js-queue/-/js-queue-2.0.3.tgz#ac7fe33d766fa53e233ef8fedaf3443a01c5a4cd"

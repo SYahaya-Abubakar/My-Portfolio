@@ -1,5 +1,7 @@
 <template>
-  <div class="main flex flex-col"><Navbar @toggleDark="toggleDark()" /></div>
+  <div class="main flex flex-col"><tetikus showDefaultCursor="true" size="30" color="#000000" contentPosition="right"/>
+  <Navbar @toggleDark="toggleDark()" />
+  </div>
 </template>
 
 <script setup lang="ts">
