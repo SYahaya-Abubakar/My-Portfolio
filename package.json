@@ -10,6 +10,8 @@
     "@luxdamore/vue-cursor-fx": "^1.6.2",
     "@namchee/tetikus": "^0.4.2",
     "@vueuse/core": "^9.11.1",
+    "flowbite": "^1.6.3",
+    "swiper": "^8.4.7",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

@@ -1,6 +1,6 @@
 <template>
-  <div class="section-1 mt-16 grid gap-5">
-    <img class="pic1" src="../assets/section-1-img.svg" alt="" />
+  <div class="section-1 mt-16 grid gap-10">
+    <img class="pic1" src="../assets/sadick_passport.jpg" alt="" />
     <div class="flex flex-col gap-5">
       <div>
         <span class="block text-5xl text-text-color-2 font-semibold"

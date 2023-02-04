@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-6">
       <span class="font-medium text-text-color leading-9 text-2xl">Hey!</span>
       <h1 class="name font-semibold text-5xl text-text-color-">
-        I’m <span class="text-gold">Sadick Yahaya</span>.<br />
+        I’m <span class="text-gold">Sadick</span>.<br />
         a Frontend Developer
       </h1>
       <span class="text-lg leading-8 font-normal text-text-color2"
@@ -31,6 +31,7 @@
         </button>
         <a href="../files/Yahaya Sadick Abubakar - Resume.pdf" download
           ><button
+            v-thover="{ scale: 2.0, border: 1 }"
             class="px-5 py-3 mt-2 rounded-lg font-bold border-2 border-gold"
             data-ripple-light="true"
           >
@@ -108,10 +109,10 @@
       </button>
     </div>
 
-    <div class="recent-projects flex justify-around">
-      <div class="">
-        <img src="../assets/project-1.svg" alt="" />
-        <div class="mt-4">
+    <div class="recent-projects flex flex-col gap-20">
+      <div class="project flex justify-between">
+        <img class="project-pic" src="../assets/project-1.svg" alt="" />
+        <div class="mt-4 project-description">
           <span class="text-xl font-semibold text-text-color-4"
             >Frontend Portfolio</span
           >
@@ -126,9 +127,26 @@
           </div>
         </div>
       </div>
-      <div>
-        <img src="../assets/project-2.svg" alt="" />
-        <div class="mt-4">
+      <div class="project flex justify-between">
+        <img class="project-pic" src="../assets/project-2.svg" alt="" />
+        <div class="mt-4 project-description">
+          <span class="text-xl font-semibold text-text-color-4"
+            >Frontend Portfolio</span
+          >
+          <div class="mt-3 self-center">
+            <span class="text-base font-medium text-text-color-3"
+              ><span><i class="fa-solid fa-book"></i></span> View Study
+              Case</span
+            >
+            <span class="text-base font-medium text-text-color-3 ml-14"
+              ><span><i class="fa-solid fa-eye"></i></span> Preview</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="project flex justify-between">
+        <img class="project-pic" src="../assets/project-1.svg" alt="" />
+        <div class="mt-4 project-description">
           <span class="text-xl font-semibold text-text-color-4"
             >Frontend Portfolio</span
           >
@@ -152,12 +170,14 @@
     >
     <div class="flex gap-7 content-center">
       <button
+        v-thover="{ scale: 2.0, border: 1 }"
         @click="sendEmail()"
         class="px-5 py-3 mt-2 rounded-lg font-bold text-text-color-2 bg-white"
       >
         <span><i class="fa-regular fa-envelope"></i></span> Let's do this
       </button>
       <button
+        v-thover="{ scale: 2.0, border: 1 }"
         @click="$router.push('/projects')"
         class="px-5 py-3 mt-2 rounded-lg font-bold border-2 text-white border-white"
         data-ripple-light="true"
@@ -187,7 +207,8 @@ import Footer from "@/components/Footer.vue";
 .about-section-1,
 .section-2,
 .heading,
-.projects {
+.projects,
+.swiper {
   width: 63.5vw;
   margin: 0 auto;
 }
@@ -200,6 +221,11 @@ import Footer from "@/components/Footer.vue";
   width: 27rem;
   height: 30rem;
 }
+
+/* .project-pic {
+  width: auto;
+  height: 15em;
+} */
 
 .name {
   line-height: 62px;
@@ -228,6 +254,16 @@ import Footer from "@/components/Footer.vue";
 /* section-2 styles */
 .recent-projects {
   grid-template-columns: 50% 50%;
+  width: 63.5vw;
+  height: auto;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-description {
+  align-self: center;
 }
 
 /* section-4 styles */
